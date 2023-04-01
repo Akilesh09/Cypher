@@ -40,9 +40,9 @@
 
 .container {
   display: grid;
-  grid-template-columns: 10rem 10rem 10rem 10rem 10rem 10rem;
-  grid-template-rows: 10rem 10rem 10rem 10rem;
-  grid-gap: 5rem;
+  grid-template-columns: 8rem 8rem 8rem 8rem 8rem 8rem 8rem;
+  grid-template-rows: 8rem 8rem 8rem 8rem;
+  grid-gap: 4rem;
 }
 
 .bg {
@@ -53,10 +53,12 @@
 }
 
 .button {
+  width: '128px';
+  height: '128px';
   position: relative;
   left: 0%;
-  top: 50%;
-  background-color: #04AA6D;
+  top: 25%;
+  background-color: #04aa20;
   border: none;
   color: white;
   padding: 20px;
@@ -67,4 +69,4 @@
 
 }
 
-.button5 {border-radius: 80%;}
+.button5 {border-radius: 50%;}
