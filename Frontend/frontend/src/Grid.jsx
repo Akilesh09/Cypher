@@ -71,10 +71,10 @@ export default function Grid () {
       <div className="item">12</div>
       <div className="item"></div>
       <div className="item">13</div>
-      <div className="item"><GridOrg name="South Asian Students Association" color="#F6BE00"/></div> /* itd be cool if we could align this a little to the left*/
+      <div className="item"><GridOrg name="South Asian Students Association" color="#F6BE00"/></div> 
       <div className="item">15</div>
       <div className="item">16</div>
-      <div className="item"><GridOrg name="South Asian Students Association" color="#F6BE00"/></div> /* and this a little to the right to make it look more circular*/
+      <div className="item"><GridOrg name="South Asian Students Association" color="#F6BE00"/></div> 
       <div className="item">18</div>
       <div className="item"></div>
       <div className="item"><GridOrg name="South Asian Students Association" color="#F6BE00"/></div>
