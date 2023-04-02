@@ -9,6 +9,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Background from './images/map1.jpeg'
 import OrganizationPage from './OrganizationPage';
 import Home from './Home';
+import Login from './Login';
+import OrgHome from './OrgHome';
+import OrgManage from './OrgManage';
 
 function App() {
   return (
@@ -24,7 +27,10 @@ function App() {
         //   <Navigation />
         //   <Grid />
         // </div> */}
+        <Route path="/login/" Component={Login} />
         <Route path="/organization/:name" Component={OrganizationPage} />
+        <Route path='/loggedIn/home/:name' Component={OrgHome} />
+        <Route path='/loogedIn/manage/:name' Component={OrgManage} />
       </Routes>
     </BrowserRouter>
   );

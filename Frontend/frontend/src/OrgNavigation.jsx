@@ -5,7 +5,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { useState } from 'react';
 //import '//Navigation.css'
 
-function BasicExample() {
+function OrgNavigation() {
 
   const [loggedIn, setLoggedIn] = useState(true)
 
@@ -18,18 +18,17 @@ function BasicExample() {
           <Nav className="color-nav" variant="light">
             <Nav.Link href="#home">About</Nav.Link>
           </Nav>
-          {loggedIn ?
-            (<Navbar.Collapse className="justify-content-end">
+          <Nav className="color-nav" variant="light">
+            <Nav.Link href="#home">About</Nav.Link>
+          </Nav>
+          
+            <Navbar.Collapse className="justify-content-end">
               <Nav.Link href="http://localhost:3000/" onClick={setLoggedIn(false)}>Logout</Nav.Link>
-            </Navbar.Collapse>) :
-            (<Navbar.Collapse className="justify-content-end">
-              <Nav.Link href="http://localhost:3000/login/">Login</Nav.Link>
-            </Navbar.Collapse>)
-          } 
+            </Navbar.Collapse>
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
 }
 
-export default BasicExample;
+export default OrgNavigation;

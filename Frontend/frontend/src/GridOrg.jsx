@@ -8,7 +8,7 @@ const GridOrg = (props) => {
     let url = "http://localhost:3000/organization/" + name
 
     return(
-        <a href={url}>
+        <a href={url} style={{textDecoration:'None', color:'black'}}>
         <div class={class_div} >
             {/* <a href={url}>
                 <button>
