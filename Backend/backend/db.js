@@ -1,6 +1,6 @@
 const Pool = require('pg').Pool
-const DB_PORT = 1693
-const DB_NAME = "International Mini Market"
+const DB_PORT = 5433
+const DB_NAME = "Inventory"
 const pool = new Pool({
     user: 'me',
     host: 'localhost',

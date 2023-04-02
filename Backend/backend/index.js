@@ -4,7 +4,7 @@ const Sequelize = require('sequelize')
 const routes = require("./router")
 
 const app = express();
-
+app.use(express.json())
 
 let port = 8080;
 app.listen(port, () => console.log('Running server on ' + port));

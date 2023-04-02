@@ -32,11 +32,11 @@ const inventoryByOrg = (req, res) => {
 
 const inventoryAddItem = (req, res) => {
     const { name, org, description, price, quantity } = req.body;
-    
+    console.log (req.body);
     // check if item exists
     console.log(name,org,description,price,quantity)
-    pool.query(addItem, [name, org, description, price, quantity], (error, results) => {
-        if (error) throw error;
+    pool.query(queries.addItem, [name, org, description, price, quantity], (error, result) => {
+        console.log(result)
         res.status(201).send("Added Item")
     })
 }
