@@ -11,9 +11,8 @@ const App = () => {
 
         <motion.div 
             animate={{rotate: rotate? 360:0}} 
-            transition={{delay:1}}
             onClick={() => {
-                setRotate(!rotate);
+                setRotate
             // initial={{scale:0}}
             ></motion.div>
         </div>

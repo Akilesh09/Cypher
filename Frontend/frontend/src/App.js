@@ -8,18 +8,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div className="App">
+    
+    <div className="App" style={{ 
+      backgroundImage: 'url(./images/map1.jpeg)' 
+    }}>
       <Navigation />
-      {/* <header className="App-header">
-      </header> */}
-     {/* <div style={{
-        width: '150px',
-        height: '150px',
+      {<header className="bg">
+      </header> }
+     {/* {<div style={{
+        // width: '150px',
+        // height: '150px',
         backgroundSize: 'cover',
-        backgroundImage: 'url(./images/map.png)'
-     }}></div> */}
-      <Grid />
-
+        backgroundImage: 'url(./images/map1.jpeg)'
+     }}></div> } */}
+    <Grid />
     </div>
   );
 }

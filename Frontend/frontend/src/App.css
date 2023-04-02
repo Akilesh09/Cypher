@@ -46,10 +46,10 @@
 }
 
 .bg {
-  background-image: url(./images/map.png);
-  width: 200px;
-  height: 200px;
-  background-size: cover;
+  background-image: url("images/map1.jpeg");
+  /* width: 200px;
+  height: 200px;  */
+  background-size: absolute;
 }
 
 .cell3 {
