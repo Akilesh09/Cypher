@@ -5,21 +5,21 @@ import { useState, useEffect } from 'react'
 export default function Grid () {
 
   var [finalMapped, setFinalMapped] = useState(
-    {3:'A', 11: 'B', 19:'C', 27:'D', 26:'E', 25:'F', 24:'G', 23:'H', 22:'I', 21:'J', 15:'K', 9:'L'}
+    {3:'South Asian Student Association', 11: 'Latin American Student Union', 19:'Hillel', 27:'Korean American Student Association', 26:'Chinese Student Organization', 25:'Japanese Culture Society', 24:'African Culture Society', 23:'Black Student Organization', 22:'Middle Eastern Student Association', 21:'Muslim Student Association', 15:'Vietnamese Student Association', 9:'Filipino American Student Association'}
   );
 
   var [secondMap, setSecondMap] = useState(
-    {'A':0, 'B':1, 'C':2, 'D':3, 'E':4, 'F':5, 'G':6, 'H':7, 'I':8, 'J':9, 'K':10, 'L':11}
+    {'South Asian Student Association':0, 'Latin American Student Union':1, 'Hillel':2, 'Korean American Student Association':3, 'Chinese Student Organization':4, 'Japanese Culture Society':5, 'African Culture Society':6, 'Black Student Organization':7, 'Middle Eastern Student Association':8, 'Muslim Student Association':9, 'Vietnamese Student Association':10, 'Filipino American Student Association':11}
   )
 
 
-  //var map = {'A':0, 'B':1, 'C':2, 'D':3, 'E':4, 'F':5, 'L':6}
+  //var map = {'A':0, 'B':1, Hillel:2, 'Korean American Student Association'':3, 'Chinese Student Organization':4, 'Japanese Culture Society':5, 'Filipino American Student Association'':6}
 
   
 
   var map2 = {0:3, 1:11, 2:19, 3:27, 4:26, 5:25, 6:24, 7:23, 8:22, 9:21, 10:15, 11:9}
 
-  var mapped = {3:'A', 11: 'B', 19:'C', 27:'D', 26:'E', 25:'F', 24:'G', 23:'H', 22:'I', 21:'J', 15:'K', 9:'L'}
+  var mapped = {3:'South Asian Student Association', 11: 'Latin American Student Association', 19:'Hillel', 27:'Korean American Student Association', 26:'Chinese Student Organization', 25:'Japanese Culture Society', 24:'African Culture Society', 23:'Black Student Organization', 22:'Middle Eastern Student Association', 21:'Muslim Student Association', 15:'Vietnamese Student Association', 9:'Filipino American Student Association'}
 
   function mod_function(x) {
     return (x + 1) % 12
@@ -67,39 +67,39 @@ export default function Grid () {
   return (
 
     <div className="container">
-      <div className="item" id='cell0'>0</div>
-      <div className="item" id='cell1'>1</div>
-      <div className="item" id='cell2'>2</div>
+      <div className="item" id='cell0'></div>
+      <div className="item" id='cell1'></div>
+      <div className="item" id='cell2'></div>
       <div className="item" >
         <div id='cell3'>
           <GridOrg name={finalMapped[3]} cell={3}/>
         </div>
       </div>
-      <div className="item" id='cell4'>4</div>
-      <div className="item" id='cell5'>5</div>
-      <div className="item" id='cell6'>6</div>
-      <div className="item" id='cell7'>7</div>
-      <div className="item" id='cell8'>8</div>
+      <div className="item" id='cell4'></div>
+      <div className="item" id='cell5'></div>
+      <div className="item" id='cell6'></div>
+      <div className="item" id='cell7'></div>
+      <div className="item" id='cell8'></div>
       <div className="item" id='cell9'><GridOrg name={finalMapped[9]} cell={9}/></div>
-      <div className="item" id='cell10'>10</div>
+      <div className="item" id='cell10'></div>
       <div className="item" id='cell11'><GridOrg name={finalMapped[11]} cell={11}/></div>
-      <div className="item" id='cell12'>12</div>
-      <div className="item" id='cell13'>13</div>
-      <div className="item" id='cell14'>14</div>
+      <div className="item" id='cell12'></div>
+      <div className="item" id='cell13'></div>
+      <div className="item" id='cell14'></div>
       <div className="item" id='cell15'><GridOrg name={finalMapped[15]} cell={15}/></div> 
-      <div className="item" id='cell16'>16</div>
-      <div className="item" id='cell17'>17</div>
-      <div className="item" id='cell18'>18</div> 
+      <div className="item" id='cell16'></div>
+      <div className="item" id='cell17'></div>
+      <div className="item" id='cell18'></div> 
       <div className="item" id='cell19'><GridOrg name={finalMapped[19]} cell={19}/></div>
       <div className="item" id='cell20'>
         <button onClick={move}>Rotate</button>
       </div>
       <div className="item" id='cell21'><GridOrg name={finalMapped[21]} cell={21}/></div>
-      <div className="item" id='cell22'><GridOrg name={finalMapped[22]} cell={22}/></div>
-      <div className="item" id='cell23'><GridOrg name={finalMapped[23]} cell={23}/></div>
-      <div className="item" id='cell24'><GridOrg name={finalMapped[24]} cell={24}/></div>
-      <div className="item" id='cell25'><GridOrg name={finalMapped[25]} cell={25}/></div>
-      <div className="item" id='cell26'><GridOrg name={finalMapped[26]} cell={26}/></div>
+      <div className="item" id='cell22'></div>
+      <div className="item" id='cell23'></div>
+      <div className="item" id='cell24'></div>
+      <div className="item" id='cell25'></div>
+      <div className="item" id='cell26'></div>
       <div className="item" id='cell27'><GridOrg name={finalMapped[27]} cell={27}/></div>
     </div>
   )
