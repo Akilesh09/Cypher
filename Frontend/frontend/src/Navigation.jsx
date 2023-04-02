@@ -9,7 +9,7 @@ function BasicExample() {
   const [loggedIn, setLoggedIn] = useState(true)
 
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="light" expand="lg" color='Green'>
       <Container>
         <Navbar.Brand href="#home">International Mini Market</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

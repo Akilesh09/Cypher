@@ -1,9 +1,10 @@
 const GridOrg = (props) => {
-
-    
+    let cell_num = props.cell;
+    let class_div = "cell" + cell_num
+    console.log(class_div)
 
     return(
-        <button class="button button5"  >{props.name}</button>
+        <div class={class_div}  >{props.name}</div>
     )
 }
 
