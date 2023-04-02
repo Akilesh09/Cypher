@@ -1,8 +1,8 @@
 const Pool = require('pg').Pool
 const DB_PORT = 5433
-const DB_NAME = "Inventory"
+const DB_NAME = "inventory"
 const pool = new Pool({
-    user: 'me',
+    user: 'postgres',
     host: 'localhost',
     database: DB_NAME,
     password: 'password',

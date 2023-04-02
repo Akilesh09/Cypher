@@ -46,10 +46,98 @@
 }
 
 .bg {
-  background-image: url(./images/map.png);
+  /* background-image: url("./images/map1.jpeg"); */
   width: 200px;
   height: 200px;
-  background-size: cover;
+  background-size: absolute;
+}
+
+.cell3 {
+  border-radius: 50%;
+  position: relative;
+  top: 40%;
+  background-color: #aa0404d8;
+  border: none;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.cell9 {
+  border-radius: 50%;
+  position: relative;
+  background-color: #b4ad2c;
+  border: none;
+  padding: 20px;
+  top: 20%;
+  right: 30%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.cell11 {
+  border-radius: 50%;
+  position: relative;
+  background-color: #04aa20;
+  border: none;
+  padding: 20px;
+  top: 20%;
+  left: 30%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.cell15 {
+  border-radius: 50%;
+  position: static;
+  background-color: #12888e;
+  border: none;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  
+}
+
+.cell19 {
+  border-radius: 50%;
+  position: relative;
+  background-color: #8abe10;
+  border: none;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  
+}
+
+.cell21 {
+  border-radius: 50%;
+  position: relative;
+  background-color: #7b1dd9;
+  border: none;
+  padding: 20px;
+  bottom: 20%;
+  left: 50%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.cell27 {
+  border-radius: 50%;
+  position: relative;
+  background-color: #d5971a;
+  border: none;
+  padding: 20px;
+  bottom: 20%;
+  right: 50%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
 }
 
 .button {
@@ -58,7 +146,7 @@
   position: relative;
   left: 0%;
   top: 25%;
-  background-color: #04aa20;
+  background-color: #cd1fb9;
   border: none;
   color: white;
   padding: 20px;
