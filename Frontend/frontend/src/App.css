@@ -36,3 +36,37 @@
     transform: rotate(360deg);
   }
 }
+
+
+.container {
+  display: grid;
+  grid-template-columns: 8rem 8rem 8rem 8rem 8rem 8rem 8rem;
+  grid-template-rows: 8rem 8rem 8rem 8rem;
+  grid-gap: 4rem;
+}
+
+.bg {
+  background-image: url(./images/map.png);
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+}
+
+.button {
+  width: '128px';
+  height: '128px';
+  position: relative;
+  left: 0%;
+  top: 25%;
+  background-color: #04aa20;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  
+  font-size: 16px;
+
+}
+
+.button5 {border-radius: 50%;}
