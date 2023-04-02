@@ -12,4 +12,8 @@ router.put("/inventory/updateQty/:name", controller.inventoryUpdateQty);
 router.put("/inventory/updatePrice/:name", controller.inventoryUpdatePrice);
 router.delete("/inventory/deleteItem/:name", controller.inventoryDeleteItem);
 
+router.post("/users/login", controller.userLogin);
+router.post("/users/signup", controller.userSignUp);
+
+
 module.exports = router;

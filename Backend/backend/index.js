@@ -1,6 +1,5 @@
 const express = require('express');
-const ejs = require('ejs');
-const Sequelize = require('sequelize');
+const bcrypt = require('bcrypt');
 const bodyParser = require("body-parser");
 const routes = require("./router");
 

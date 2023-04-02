@@ -1,6 +1,6 @@
 const { pool } = require("./db")
 const queries = require("./queries");
-
+const bcrypt = require("bcrypt") 
 
 
 const inventory = (req, res) => {
@@ -119,6 +119,49 @@ const inventoryUpdatePrice = (req, res) => {
     }
   });
 };
+
+const userLogin = (req, res) => {
+    const potentialLogin = pool.query("SELECT org, password FROM users u WHERE u.org=$1",
+    [req.body.org]);
+    if (potentialLogin.rowCount > 0) {
+        const isSamePass = bcrypt.compare(req.body.password, potentialLogin.rows[0].password);
+        if (isSamePass) {
+            res.json({loggedIn: true})
+        } else {
+            res.json({ loggedIn: false, status: "Wrong username or password" });
+        }
+    } else {
+        res.json({loggedIn: false, status:"Wrong username or password"})
+    }
+}
+
+const userSignUp = (req, res) => {
+
+    pool.query("SELECT org FROM users WHERE org=$1",
+    [req.body.org], (error, results) => {
+        if (results.rowCount == 0) {
+            //register
+            bcrypt.hash(req.body.password, 10).then(hash => {
+                pool.query(
+                    "INSERT INTO users(org, password) values($1, $2)",
+                    [req.body.org, hashedPass],
+                    (error, results) => {
+                        res.json({ loggedIn: true, username: req.body.org });
+                    }
+                );
+            }).catch(err => {
+                console.log(err);
+            });
+        } else {
+            res.json({ logged_in: "false", status: "Username taken" });
+        }
+    });
+    
+    
+
+}
+
+
 module.exports = {
   inventory,
   inventoryByName,
@@ -127,5 +170,7 @@ module.exports = {
   inventoryDeleteItem,
   inventoryUpdateItem,
   inventoryUpdateQty,
-  inventoryUpdatePrice
+  inventoryUpdatePrice,
+  userLogin,
+  userSignUp
 };
