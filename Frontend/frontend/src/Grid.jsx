@@ -54,22 +54,6 @@ import { useState } from 'react'
 
 export default function Grid () {
 
-  // const [ALoc, setALoc] = useState(3);
-  // const [BLoc, setBLoc] = useState(11);
-  // const [CLoc, setCLoc] = useState(19)
-  // const [DLoc, setDLoc] = useState(27);
-  // const [ELoc, setELoc] = useState(26);
-  // const [FLoc, setFLoc] = useState(25);
-  // const [GLoc, setGLoc] = useState(24);
-  // const [HLoc, setHLoc] = useState(23);
-  // const [ILoc, setILoc] = useState(22);
-  // const [JLoc, setJLoc] = useState(21);
-  // const [KLoc, setKLoc] = useState(15);
-  // const [LLoc, setLLoc] = useState(9);
-
-  // var dict = {
-  //   9: 'L', 3: 'A', 11: 'B', 19:'C', 27: 'D', 26: 'E', 25: 'F'
-  // }
 
   var map = {'A':0, 'B':1, 'C':2, 'D':3, 'E':4, 'F':5, 'L':6}
 
@@ -78,7 +62,9 @@ export default function Grid () {
     console.log(key + ":" + map[key])
   }
 
-  //var map2 = {0:3, 1:11, 2:19, 3:27, 4:26, 5:25, 6:9}
+  var map2 = {0:3, 1:11, 2:19, 3:27, 4:26, 5:25, 6:9}
+
+  var mapped = {}
 
   function mod_function(x) {
     return (x + 1) % 7
@@ -90,12 +76,24 @@ export default function Grid () {
       let old_value = map[letters[i]]
       let new_value = mod_function(old_value)
       map[letters[i]] = new_value
+
+    for(let j = 0; j < 7; j++) {
+      let index = map[letters[j]]
+      mapped[index] = map2[letters[j]]
+    }
+
+
     }
 
   console.log("After: ")
     
   for (const key of Object.keys(map)) {
     console.log(key + ":" + map[key])
+  }
+
+  console.log("FINAL MAPS: ")
+  for (const key of Object.keys(mapped)) {
+    console.log(key + ":" + mapped[key])
   }
 
     
@@ -122,7 +120,7 @@ export default function Grid () {
       <div className="item" id='cell6'>6</div>
       <div className="item" id='cell7'>7</div>
       <div className="item" id='cell8'>8</div>
-      <div className="item" id='cell9'><GridOrg name="Bluh" cell={9}/></div>
+      <div className="item" id='cell9'><GridOrg name={mapped[9]} cell={9}/></div>
       <div className="item" id='cell10'>10</div>
       <div className="item" id='cell11'><GridOrg name={[11]} cell={11}/></div>
       <div className="item" id='cell12'>12</div>
