@@ -1,11 +1,12 @@
 const Pool = require('pg').Pool
-const dbPort = 5433
+const DB_PORT = 1693
+const DB_NAME = "International Mini Market"
 const pool = new Pool({
     user: 'me',
     host: 'localhost',
-    database: 'inventory',
+    database: DB_NAME,
     password: 'password',
-    port: dbPort,
+    port: DB_PORT,
 })
 
 module.exports = {
